@@ -9,6 +9,11 @@ require 'uai_lang/runtime/context'
 require 'uai_lang/runtime/method'
 require 'uai_lang/runtime/object'
 require 'uai_lang/runtime/class'
+require 'uai_lang/runtime/eval'
+
+require 'uai_lang/globals'
+
+require 'uai_lang/interpreter'
 
 module UaiLang
 end

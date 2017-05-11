@@ -11,6 +11,10 @@ module UaiLang
         nodes << node
         self
       end
+
+      def eval(context)
+        UaiLang::Runtime::Eval.new(nodes, context).execute
+      end
     end
   end
 end
