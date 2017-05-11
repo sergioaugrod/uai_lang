@@ -6,7 +6,7 @@ Globals['Number'] = UaiLang::Runtime::Class.new
 Globals['String'] = UaiLang::Runtime::Class.new
 
 root_self = Globals['Object'].new
-RootContext = UaiLang::Runtime::Context.new(root_self)
+Globals['RootContext'] = UaiLang::Runtime::Context.new(root_self)
 
 Globals['TrueClass']  = UaiLang::Runtime::Class.new
 Globals['FalseClass'] = UaiLang::Runtime::Class.new
@@ -18,4 +18,9 @@ Globals['nil']   = Globals['NilClass'].new(nil)
 
 Globals['Class'].define_method(:new) do |receiver, arguments|
   receiver.new
+end
+
+Globals['Object'].define_method(:print) do |receiver, arguments|
+  puts(arguments.first.value)
+  Globals['nil']
 end

@@ -7,6 +7,7 @@ RSpec.describe UaiLang::Interpreter do
     it 'execute some code' do
       code = <<-CODE
         b = 5
+        print(b)
       CODE
 
       result = subject.eval(code)

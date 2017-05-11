@@ -8,7 +8,7 @@ module UaiLang
       end
 
       def run_method(name)
-        self_methods[name].tap do |method|
+        self_methods[name.to_sym].tap do |method|
           raise "O trem não existe só." if method.nil?
         end
       end

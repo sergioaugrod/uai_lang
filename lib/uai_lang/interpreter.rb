@@ -13,7 +13,7 @@ module UaiLang
     attr_reader :parser
 
     def context
-      Runtime::Class.new
+      Globals['RootContext']
     end
   end
 end
