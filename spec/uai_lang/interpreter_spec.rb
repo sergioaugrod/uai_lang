@@ -11,7 +11,9 @@ RSpec.describe UaiLang::Interpreter do
       CODE
 
       result = subject.eval(code)
-      expect(result).to eq nil
+
+      expect(result).to be_a(UaiLang::Runtime::Object)
+      expect(result.value).to be_nil
     end
   end
 end

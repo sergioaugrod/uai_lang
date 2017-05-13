@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'uai_lang'
+require 'readline'
+
+header = """
+ _   _       _ _
+| | | | __ _(_) |    __ _ _ __   __ _
+| | | |/ _` | | |   / _` | '_ \ / _` |
+| |_| | (_| | | |__| (_| | | | | (_| |
+ \___/ \__,_|_|_____\__,_|_| |_|\__, |
+                                |___/
+"""
+
+puts(header)
+
+interpreter = UaiLang::Interpreter.new
+
+if file = ARGV.first
+  interpreter.eval(File.read(file))
+else
+  puts('UaiLang REPL. Ctrl+C to quit.')
+
+  loop do
+    line = Readline.readline('>> ')
+    Readline::HISTORY.push(line)
+    evaluated = interpreter.eval(line)
+    puts("=> #{evaluated.value.inspect}")
+  end
+end

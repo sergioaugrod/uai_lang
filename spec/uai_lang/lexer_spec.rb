@@ -3,39 +3,36 @@ require 'spec_helper'
 RSpec.describe UaiLang::Lexer do
   describe '#tokenize' do
     it 'returns tokens for assigns code' do
-      code = ''"
-      b = 5
+      code = <<-CODE
+      b = "5"
       a = 25 + b
-      "''
+      CODE
 
       result = described_class.new(code).tokenize
       tokens = [
-        [:NEWLINE, "\n"],
         [:IDENTIFIER, 'b'],
         ['=', '='],
-        [:NUMBER, '5'],
+        [:STRING, '5'],
         [:NEWLINE, "\n"],
         [:IDENTIFIER, 'a'],
         ['=', '='],
         [:NUMBER, '25'],
         ['+', '+'],
-        [:IDENTIFIER, 'b'],
-        [:NEWLINE, "\n"]
+        [:IDENTIFIER, 'b']
       ]
 
       expect(result).to eq tokens
     end
 
     it 'returns tokens for function definition code' do
-      code = ''"
+      code = <<-CODE
       functrem soma(a, b) faiz
         a + b
       popara
-      "''
+      CODE
 
       result = described_class.new(code).tokenize
       tokens = [
-        [:NEWLINE, "\n"],
         [:DEF, 'functrem'],
         [:IDENTIFIER, 'soma'],
         ['(', '('],
@@ -49,8 +46,7 @@ RSpec.describe UaiLang::Lexer do
         ['+', '+'],
         [:IDENTIFIER, 'b'],
         [:NEWLINE, "\n"],
-        [:BLOCK_END, 'popara'],
-        [:NEWLINE, "\n"]
+        [:BLOCK_END, 'popara']
       ]
 
       expect(result).to eq tokens

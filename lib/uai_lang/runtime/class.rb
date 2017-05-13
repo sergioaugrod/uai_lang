@@ -9,7 +9,7 @@ module UaiLang
 
       def run_method(name)
         self_methods[name.to_sym].tap do |method|
-          raise "O trem não existe só." if method.nil?
+          raise 'O trem não existe só.' if method.nil?
         end
       end
 
@@ -17,8 +17,12 @@ module UaiLang
         self_methods[name] = block
       end
 
-      def new(value = nil)
-        value ? Object.new(self, value) : Object.new(self)
+      def new
+        Object.new(self)
+      end
+
+      def new_with_value(value)
+        Object.new(self, value)
       end
     end
   end

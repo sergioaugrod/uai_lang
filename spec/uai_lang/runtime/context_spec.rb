@@ -10,7 +10,7 @@ RSpec.describe UaiLang::Runtime::Context do
     it 'initialize attributes' do
       instance = described_class.new(current_self)
 
-      expect(instance.locals).to eq Hash.new
+      expect(instance.locals).to eq({})
       expect(instance.current_self).to eq current_self
       expect(instance.current_class).to eq current_class
     end

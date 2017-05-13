@@ -25,22 +25,22 @@ module UaiLang
       end
 
       def eval_number(node)
-        Globals['Number'].new(node.value)
+        Globals['Number'].new_with_value(node.value)
       end
 
       def eval_string(node)
-        Globals['String'].new(node.value)
+        Globals['String'].new_with_value(node.value)
       end
 
-      def eval_true(node)
+      def eval_true(_node)
         Globals['true']
       end
 
-      def eval_false(node)
+      def eval_false(_node)
         Globals['false']
       end
 
-      def eval_nil(node)
+      def eval_nil(_node)
         Globals['nil']
       end
 
@@ -50,11 +50,11 @@ module UaiLang
       end
 
       def eval_call_node(node)
-        if node.receiver
-          value = eval_node(node.receiver)
-        else
-          value = context.current_self
-        end
+        value = if node.receiver
+                  eval_node(node.receiver)
+                else
+                  context.current_self
+                end
 
         arguments = node.arguments.map { |arg| eval_node(arg) }
 

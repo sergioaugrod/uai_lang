@@ -7,7 +7,7 @@ RSpec.describe UaiLang::Runtime::Method do
   subject { described_class.new(params, body) }
 
   describe '#call' do
-    let(:context) {  double(UaiLang::Runtime::Context) }
+    let(:context) { double(UaiLang::Runtime::Context) }
     let(:object) { double(UaiLang::Runtime::Object) }
 
     before do

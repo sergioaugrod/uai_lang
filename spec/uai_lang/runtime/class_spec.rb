@@ -25,22 +25,20 @@ RSpec.describe UaiLang::Runtime::Class do
   end
 
   describe '#new' do
-    context 'when value is not nil' do
-      it 'returns object' do
-        object = subject.new(10)
+    it 'returns object' do
+      object = subject.new
 
-        expect(object).to be_a(UaiLang::Runtime::Object)
-        expect(object.value).to eq 10
-      end
+      expect(object).to be_a(UaiLang::Runtime::Object)
+      expect(object.value).to be_a(UaiLang::Runtime::Object)
     end
+  end
 
-    context 'when value is nil' do
-      it 'returns object' do
-        object = subject.new
+  describe '#new_with_value' do
+    it 'returns object' do
+      object = subject.new_with_value(10)
 
-        expect(object).to be_a(UaiLang::Runtime::Object)
-        expect(object.value).to be_a(UaiLang::Runtime::Object)
-      end
+      expect(object).to be_a(UaiLang::Runtime::Object)
+      expect(object.value).to eq 10
     end
   end
 end

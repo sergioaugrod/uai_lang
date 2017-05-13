@@ -15,7 +15,7 @@ module UaiLang
       identifier: /\A([a-z]\w*)/,
       constant: /\A([A-Z]\w*)/,
       number: /\A([0-9]+)/,
-      string: /\A([^"]*)"/,
+      string: /\A"([^"]*)"/,
       operator: /\A(AND|OR|==|!=|<=|>=)/,
       line: /\A\n+/,
       whitespace: /\A /
