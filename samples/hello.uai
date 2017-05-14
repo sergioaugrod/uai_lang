@@ -1,0 +1,6 @@
+functrem printa faiz
+  print(10)
+  print(2)
+popara
+
+printa()

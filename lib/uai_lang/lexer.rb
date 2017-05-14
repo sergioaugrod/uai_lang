@@ -96,7 +96,11 @@ module UaiLang
     end
 
     def token_new_line
-      tokens << [:NEWLINE, "\n"]
+      tokens << [:NEWLINE, "\n"] unless block_init?
+    end
+
+    def block_init?
+      tokens.empty? || tokens.last.first == :BLOCK_INIT
     end
   end
 end
