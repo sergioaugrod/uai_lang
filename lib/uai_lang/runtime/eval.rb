@@ -46,7 +46,7 @@ module UaiLang
 
       def eval_def(node)
         method = UaiLang::Runtime::Method.new(node.params, node.body)
-        context.current_class.runtime_methods[node.name] = method
+        context.current_class.self_methods[node.name.to_sym] = method
       end
 
       def eval_call_node(node)
