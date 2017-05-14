@@ -29,7 +29,7 @@ preclow
 # Rules
 rule
   Program:
-          /* nothing */                       { result = Parser::Nodes.new([]) }
+          /* empty */                       { result = Parser::Nodes.new([]) }
         | Expressions                       { result = val[0] }
         ;
 
@@ -37,7 +37,6 @@ rule
           Expression                        { result = Parser::Nodes.new(val) }
         | Expressions Terminator Expression { result = val[0] << val[2] }
         | Expressions Terminator            { result = val[0] }
-        | Terminator                        { result = Parser::Nodes.new([]) }
         ;
 
   Expression:
@@ -126,7 +125,7 @@ rule
         ;
 
   ParamList:
-          /* nothing */                     { result = [] }
+          /* empty */                     { result = [] }
         | IDENTIFIER                        { result = val }
         | ParamList ',' IDENTIFIER          { result = val[0] << val[2] }
         ;

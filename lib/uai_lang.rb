@@ -12,7 +12,6 @@ require 'uai_lang/runtime/class'
 require 'uai_lang/runtime/eval'
 
 require 'uai_lang/globals'
-
 require 'uai_lang/interpreter'
 
 module UaiLang
