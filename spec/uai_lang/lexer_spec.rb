@@ -41,7 +41,6 @@ RSpec.describe UaiLang::Lexer do
         [:IDENTIFIER, 'b'],
         [')', ')'],
         [:BLOCK_INIT, 'faiz'],
-        [:NEWLINE, "\n"],
         [:IDENTIFIER, 'a'],
         ['+', '+'],
         [:IDENTIFIER, 'b'],
