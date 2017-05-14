@@ -81,7 +81,7 @@ module UaiLang
     end
 
     def token_number(number)
-      tokens << [:NUMBER, number]
+      tokens << [:NUMBER, number.to_i]
       number.size
     end
 

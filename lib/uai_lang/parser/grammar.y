@@ -84,18 +84,18 @@ rule
         ;
 
   Operator:
-          Expression '||' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '&&' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '==' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '!=' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '>' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '>=' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '<' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '<=' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '+' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '-' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '*' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
-        | Expression '/' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) }
+          Expression 'OR' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression 'AND' Expression       { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '==' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '!=' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '>' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '>=' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '<' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '<=' Expression        { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '+' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '-' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '*' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
+        | Expression '/' Expression         { result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) }
         ;
 
   GetConstant:

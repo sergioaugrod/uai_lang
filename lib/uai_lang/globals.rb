@@ -24,3 +24,12 @@ Globals['Object'].define_method(:print) do |_receiver, arguments|
   puts(arguments.first.value)
   Globals['nil']
 end
+
+OPERATORS = [:+, :-, :*, :/]
+
+OPERATORS.each do |operator|
+  Globals['Number'].define_method(operator) do |receiver, arguments|
+    argument = arguments.first.value
+    Globals['Number'].new_with_value(receiver.value.send(operator, argument))
+  end
+end

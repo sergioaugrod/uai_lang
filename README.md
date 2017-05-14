@@ -32,13 +32,13 @@ $ racc -o generator.rb grammar.y
 Running codes in REPL:
 
 ```bash
-bin/repl
+$ bin/repl
 ```
 
 Executing file code:
 
 ```bash
-bin/repl code.uai
+$ bin/repl code.uai
 ```
 
 ## Usage
@@ -46,12 +46,11 @@ bin/repl code.uai
 Example of function creation:
 
 ```ruby
-functrem printa faiz
-  print(10)
-  print(2)
+functrem soma(a, b) faiz
+  a + b
 popara
 
-printa()
+soma(1, 2)
 ```
 
 Example of if:

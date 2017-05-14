@@ -499,84 +499,84 @@ module_eval(<<'.,.,', 'grammar.y', 82)
 
 module_eval(<<'.,.,', 'grammar.y', 86)
   def _reduce_31(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 87)
   def _reduce_32(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 88)
   def _reduce_33(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 89)
   def _reduce_34(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 90)
   def _reduce_35(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 91)
   def _reduce_36(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 92)
   def _reduce_37(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 93)
   def _reduce_38(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 94)
   def _reduce_39(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 95)
   def _reduce_40(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 96)
   def _reduce_41(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 97)
   def _reduce_42(val, _values, result)
-     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: val[2] }) 
+     result = Parser::Node.new(:call_node, { receiver: val[0], method: val[1], arguments: [val[2]] }) 
     result
   end
 .,.,

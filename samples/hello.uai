@@ -1,9 +1,9 @@
-functrem printa faiz
-  print(10)
-  print(2)
+functrem soma(a, b) faiz
+  a + b
 popara
 
-printa()
+result = soma(1, 2)
+print(result)
 
 if true faiz
   print("true")
