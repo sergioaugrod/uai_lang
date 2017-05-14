@@ -16,7 +16,7 @@ RSpec.describe UaiLang::Lexer do
         [:NEWLINE, "\n"],
         [:IDENTIFIER, 'a'],
         ['=', '='],
-        [:NUMBER, '25'],
+        [:NUMBER, 25],
         ['+', '+'],
         [:IDENTIFIER, 'b']
       ]
