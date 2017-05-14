@@ -76,6 +76,16 @@ module UaiLang
       def eval_set_local(node)
         context.locals[node.name] = eval_node(node.value)
       end
+
+      def eval_if(node)
+        if eval_node(node.condition).value
+          node.body.nodes.each do |body_node|
+            eval_node(body_node)
+          end
+        else
+          Globals['nil']
+        end
+      end
     end
   end
 end

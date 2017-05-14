@@ -4,3 +4,8 @@ functrem printa faiz
 popara
 
 printa()
+
+if true faiz
+  print("true")
+  print(1)
+popara

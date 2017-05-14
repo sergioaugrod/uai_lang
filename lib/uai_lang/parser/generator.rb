@@ -668,7 +668,7 @@ module_eval(<<'.,.,', 'grammar.y', 134)
 
 module_eval(<<'.,.,', 'grammar.y', 138)
   def _reduce_55(val, _values, result)
-     result = Parser::Node.new(:class, { name: val[1], body: val[2] }) 
+     result = Parser::Node.new(:if, { condition: val[1], body: val[2] }) 
     result
   end
 .,.,

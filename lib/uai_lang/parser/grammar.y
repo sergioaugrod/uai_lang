@@ -136,7 +136,7 @@ rule
         ;
 
   If:
-          IF Expression Block               { result = Parser::Node.new(:class, { name: val[1], body: val[2] }) }
+          IF Expression Block               { result = Parser::Node.new(:if, { condition: val[1], body: val[2] }) }
         ;
 
 ---- inner
